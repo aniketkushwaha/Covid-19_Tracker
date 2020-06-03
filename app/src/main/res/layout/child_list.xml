@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingTop="5dp"
+    android:layoutDirection="ltr"
+    android:layout_gravity="left"
+    >
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/zone"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        tools:text="Rajasthan"></TextView>
+
+    <TextView
+        android:id="@+id/confirmed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="serif"
+        android:textColor="@color/SecondaryText"
+        android:gravity="center"
+        tools:text="4888"></TextView>
+
+    <TextView
+        android:id="@+id/active"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/SecondaryText"
+        android:fontFamily="serif"
+        android:gravity="center"
+
+        tools:text="1888"></TextView>
+
+    <TextView
+        android:id="@+id/deaths"
+        android:layout_width="0dp"
+
+        android:textColor="@color/SecondaryText"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:fontFamily="serif"
+        tools:text="125"></TextView>
+</LinearLayout>
