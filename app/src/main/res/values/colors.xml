@@ -3,7 +3,8 @@
     <color name="colorPrimary">#607D8B</color>
     <color name="colorPrimaryDark">#455A64</color>
     <color name="LightPrimary">#CFD8DC</color>
-    <color name="colorAccent">#9E9E9E</color>
+    <color name="colorAccent">#5391CC</color>
+    <color name="background">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
     <color name="PrimaryText">#212121</color>
     <color name="SecondaryText">#757575</color>

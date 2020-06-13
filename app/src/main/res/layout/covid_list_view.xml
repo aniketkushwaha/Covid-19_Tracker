@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-     tools:context=".CovidActivity">
+     tools:context=".CovidActivity"
+    android:background="@color/background">
 
     <LinearLayout
         android:id="@+id/header"
@@ -17,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="casual"
-            android:text="States"
+            android:text="@string/states"
             android:textColor="#009688"
             android:textSize="18sp"
             android:textStyle="bold"></TextView>
@@ -27,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="casual"
-            android:text="Confirmed"
+            android:text="@string/confirmed"
           android:gravity="center"
             android:textColor="#2196F3"
             android:textSize="18sp"
@@ -38,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="casual"
-            android:text="Active"
+            android:text="@string/active"
            android:gravity="center"
             android:textColor="#FFC107"
             android:textSize="18sp"
@@ -49,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="casual"
-            android:text="Deaths"
+            android:text="@string/deaths"
             android:gravity="center"
             android:textColor="#F43636"
             android:textSize="18sp"
@@ -60,10 +61,11 @@
         android:layout_width="match_parent"
         android:layout_below="@+id/header"
         android:layout_height="2dp"
+        android:id="@+id/divider"
         android:background="@color/divider"></TextView>
     <ExpandableListView
         android:id="@+id/list"
-        android:layout_below="@+id/header"
+        android:layout_below="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="@color/divider"

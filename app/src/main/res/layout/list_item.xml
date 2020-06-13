@@ -16,8 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:fontFamily="casual"
-
-android:textColor="@color/PrimaryText"
+        android:textColor="@color/PrimaryText"
         android:textStyle="bold"
         tools:text="Rajasthan"></TextView>
 
@@ -44,7 +43,6 @@ android:textColor="@color/PrimaryText"
     <TextView
         android:id="@+id/deaths"
         android:layout_width="0dp"
-
         android:gravity="center"
         android:textColor="@color/PrimaryText"
         android:layout_height="wrap_content"

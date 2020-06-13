@@ -3,13 +3,20 @@ package com.example.android.covid_19tracker;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import android.app.LoaderManager;
+import android.content.Intent;
 import android.content.Loader;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
@@ -52,6 +59,7 @@ public class CovidActivity extends AppCompatActivity implements LoaderManager.Lo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       setTheme(this);
         setContentView(R.layout.covid_list_view);
         emptyView =findViewById(R.id.emptyView);
 
@@ -59,6 +67,10 @@ public class CovidActivity extends AppCompatActivity implements LoaderManager.Lo
          listView.setEmptyView(emptyView);
         mAdapter =new ExpandableListViewAdaper(context,new ArrayList<covid_cases>());
         listView.setAdapter(mAdapter);
+
+
+
+
 
         ConnectivityManager manager=(ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo=manager.getActiveNetworkInfo();
@@ -72,4 +84,37 @@ public class CovidActivity extends AppCompatActivity implements LoaderManager.Lo
         }
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        recreate();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id =item.getItemId();
+        if(id==R.id.action_settings){
+            Intent intent=new Intent(this,settings_activity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    public static void setTheme(Context context){
+        SharedPreferences preferences= PreferenceManager.getDefaultSharedPreferences(context);
+        boolean nightmode = preferences.getBoolean("darkmode",false);
+        if(nightmode){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        else{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+    }
 }

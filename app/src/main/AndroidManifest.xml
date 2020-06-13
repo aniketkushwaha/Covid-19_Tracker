@@ -18,6 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".settings_activity"
+            android:label="@string/settings"
+
+            android:parentActivityName=".CovidActivity">
+        </activity>
     </application>
 
 </manifest>

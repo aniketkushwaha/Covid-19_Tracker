@@ -1,8 +1,13 @@
 package com.example.android.covid_19tracker;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.wifi.WifiEnterpriseConfig;
+import android.preference.PreferenceManager;
 import android.renderscript.ScriptGroup;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatDelegate;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -162,4 +167,6 @@ public class QueryUtils {
         }
         return JSONresponse;
     }
+
+
 }

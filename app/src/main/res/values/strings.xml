@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">Covid-19 Tracker</string>
-
+    <string name="states">States</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="active">Active</string>
+    <string name="deaths">Deaths</string>
+    <!-- used to set text for empty text view-->
     <string name="empty">No Cases Found.</string>
+
+    <string name="settings">Settings</string>
+     <!--preferences key and title-->
+    <string name="darkmode_key">darkmode</string>
+    <string name="darkmode_title">Dark mode</string>
+    <string name="darkmode_summary">Turn Dark mode on/off</string>
+
 </resources>
