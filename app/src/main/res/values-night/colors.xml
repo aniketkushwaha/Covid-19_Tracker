@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryDark">#455A64</color>
+    <color name="LightPrimary">#3B4C55</color>
+    <color name="colorAccent">#5391CC</color>
+    <color name="divider">#919191</color>
+    <color name="background">#263238</color>
+    <color name="PrimaryText">#B4B4B4</color>
+    <color name="SecondaryText">#FFFFFF</color>
+
+    <color name="RedZone">#A6FF0000</color>
+    <color name="GreenZone">#A6008000</color>
+    <color name="OrangeZone">#A6FFA500</color>
+</resources>
